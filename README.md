@@ -1,2 +1,40 @@
-# uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024
-Base de datos sobre uso problemático de smartphones y su impacto en la salud mental de adolescentes en América Latina (2015-2024). Incluye prevalencia por país, grupo de edad, género, tipo de uso e indicadores asociados de salud mental.
+# Uso Problemático de Smartphones y Salud Mental en Adolescentes de América Latina (2015–2024)
+
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19145316-blue?logo=doi)](https://doi.org/10.5281/zenodo.19145316)
+[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--8401--8018-green?logo=orcid)](https://orcid.org/0000-0002-8401-8018)
+[![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey)](http://creativecommons.org/publicdomain/zero/1.0/)
+[![Collection](https://img.shields.io/badge/Collection_DOI-10.5281%2Fzenodo.19145316-blue?logo=zenodo)](https://doi.org/10.5281/zenodo.19145316)
+
+> Parte de la **[Colección de Investigación Abierta](https://doi.org/10.5281/zenodo.19145316)** — 1,273+ datasets
+
+## Descripción
+
+Base de datos sobre uso problemático de smartphones y su impacto en la salud mental de adolescentes en América Latina (2015-2024). Incluye prevalencia por país, grupo de edad, género, tipo de uso e indicadores de salud mental.
+
+## 📝 Cómo Citar
+
+Si usas este recurso, por favor cita:
+
+```bibtex
+@misc{delaserna2024_uso_problematico_sma,
+  author    = {de la Serna Tuya, Juan Moisés},
+  title     = {Uso Problemático de Smartphones y Salud Mental en Adolescentes de América Latina (2015–2024)},
+  year      = {2024},
+  doi       = {10.5281/zenodo.19145316},
+  url       = {https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024},
+  publisher = {Zenodo},
+  license   = {CC0-1.0}
+}
+```
+
+**APA:** de la Serna Tuya, J. M. (2024). *Uso Problemático de Smartphones y Salud Mental en Adolescentes de América Latina (2015–2024)*. https://doi.org/10.5281/zenodo.19145316
+
+## ⚖️ Licencia
+
+[![CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey)](http://creativecommons.org/publicdomain/zero/1.0/)
+
+Dominio Público (CC0 1.0). Libre para usar, compartir y modificar.
+
+---
+
+**Juan Moisés de la Serna Tuya** · UNIR · [ORCID](https://orcid.org/0000-0002-8401-8018) · [GitHub](https://github.com/juanmoisesd) · [ResearchGate](https://www.researchgate.net/profile/Juan-Moises-De-La-Serna-Tuya)
