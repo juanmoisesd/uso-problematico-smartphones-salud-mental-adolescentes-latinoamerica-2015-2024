@@ -1,0 +1,10 @@
+{
+  "@context": "http://www.w3.org/ns/dcat-ap#",
+  "@type": "Dataset",
+  "title": "Uso Problemático de Smartphones y Salud Mental en Adolescentes de América Latina (2015–2024)",
+  "description": "Database on problematic smartphone use and its impact on the mental health of adolescents in Latin America (2015-2024).",
+  "publisher": {
+    "@type": "Agent",
+    "name": "Juan Moisés de la Serna Tuya"
+  }
+}

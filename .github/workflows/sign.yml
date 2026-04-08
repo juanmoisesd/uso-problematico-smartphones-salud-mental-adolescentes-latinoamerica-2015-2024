@@ -1,0 +1,11 @@
+name: Sign
+on:
+  release:
+    types: [published]
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Sign artifacts
+        run: echo "Signing artifacts..."
