@@ -62,7 +62,7 @@ The project addresses key questions in the field of neuroscience and social scie
 
 ## Preprints: Neurociencia y Educación Matemática / Neuroscience and Math Education
 
-Esta colección bilingüe contiene 20 metaanálisis científicos (10 en español, 10 en inglés) desarrollados por **Juan Moisés de la Serna** siguiendo las directrices PRISMA.
+Esta colección trilingüe contiene 30 metaanálisis científicos (10 en español, 10 en inglés, 10 en francés) desarrollados por **Juan Moisés de la Serna** siguiendo las directrices PRISMA.
 
 ### English Collection (Professional Academic Format)
 1. **The Number Instinct**: Innate perception of quantities in humans and animals.
@@ -75,6 +75,18 @@ Esta colección bilingüe contiene 20 metaanálisis científicos (10 en español
 8. **The Mental Gym**: Neuroplasticity and logical capacity training.
 9. **Anatomy of a Genius**: Neurobiological differences in exceptional minds.
 10. **The Neuronal Symphony**: Mathematics as the brain's natural language.
+
+### Collection en Français (Format Académique)
+1. **L'instinct numérique** : Perception innée des quantités chez l'homme et l'animal.
+2. **La géographie du calcul** : Réseaux neuronaux impliqués dans le traitement mathématique.
+3. **Des blocs aux équations** : Développement neurobiologique de l'abstraction numérique.
+4. **Le duel cérébral** : Interaction entre systèmes intuitif et logique.
+5. **Le raccourci de la mémoire** : Neuroplasticité de l'automatisation du calcul.
+6. **L'amygdale et la panique des chiffres** : Neurobiologie de l'anxiété mathématique.
+7. **Le cerveau déconnecté** : Dyscalculie développementale et altérations neuronales.
+8. **Le gymnase mental** : Entraînement des capacités logiques et neuroplasticité.
+9. **Anatomie d'un génie** : Différences neurobiologiques chez les esprits exceptionnels.
+10. **La symphonie neuronale** : Les mathématiques comme langage naturel du cerveau.
 
 ### Colección en Español
 1. **El instinto numérico**: Percepción innata de las cantidades.

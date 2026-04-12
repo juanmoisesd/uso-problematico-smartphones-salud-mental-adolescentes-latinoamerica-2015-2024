@@ -1,6 +1,6 @@
 {
   "name": "neuroscience-math-cognition-preprints",
-  "title": "Bilingual Meta-Analyses on Neuroscience and Mathematics Education",
+  "title": "Trilingual Meta-Analyses on Neuroscience and Mathematics Education",
   "resources": [
     {
       "path": "preprints/es/Chapter_1_Instinto_Numerico.md",
@@ -10,6 +10,11 @@
     {
       "path": "preprints/en/Chapter_1_Number_Instinct.md",
       "name": "en-chapter-1",
+      "format": "md"
+    },
+    {
+      "path": "preprints/fr/Chapter_1_Instinct_Numerique.md",
+      "name": "fr-chapter-1",
       "format": "md"
     },
     {
@@ -23,6 +28,11 @@
       "format": "md"
     },
     {
+      "path": "preprints/fr/Chapter_2_Geographie_Calcul.md",
+      "name": "fr-chapter-2",
+      "format": "md"
+    },
+    {
       "path": "preprints/es/Chapter_3_Bloques_Ecuaciones.md",
       "name": "es-chapter-3",
       "format": "md"
@@ -30,6 +40,11 @@
     {
       "path": "preprints/en/Chapter_3_From_Blocks_to_Equations.md",
       "name": "en-chapter-3",
+      "format": "md"
+    },
+    {
+      "path": "preprints/fr/Chapter_3_Blocs_Equations.md",
+      "name": "fr-chapter-3",
       "format": "md"
     },
     {
@@ -43,6 +58,11 @@
       "format": "md"
     },
     {
+      "path": "preprints/fr/Chapter_4_Duel_Cerebral.md",
+      "name": "fr-chapter-4",
+      "format": "md"
+    },
+    {
       "path": "preprints/es/Chapter_5_Atajo_Memoria.md",
       "name": "es-chapter-5",
       "format": "md"
@@ -50,6 +70,11 @@
     {
       "path": "preprints/en/Chapter_5_Memory_Shortcut.md",
       "name": "en-chapter-5",
+      "format": "md"
+    },
+    {
+      "path": "preprints/fr/Chapter_5_Raccourci_Memoire.md",
+      "name": "fr-chapter-5",
       "format": "md"
     },
     {
@@ -63,6 +88,11 @@
       "format": "md"
     },
     {
+      "path": "preprints/fr/Chapter_6_Panique_Chiffres.md",
+      "name": "fr-chapter-6",
+      "format": "md"
+    },
+    {
       "path": "preprints/es/Chapter_7_Cerebro_Desconectado.md",
       "name": "es-chapter-7",
       "format": "md"
@@ -70,6 +100,11 @@
     {
       "path": "preprints/en/Chapter_7_Disconnected_Brain.md",
       "name": "en-chapter-7",
+      "format": "md"
+    },
+    {
+      "path": "preprints/fr/Chapter_7_Cerveau_Deconnecte.md",
+      "name": "fr-chapter-7",
       "format": "md"
     },
     {
@@ -83,6 +118,11 @@
       "format": "md"
     },
     {
+      "path": "preprints/fr/Chapter_8_Gymnase_Mental.md",
+      "name": "fr-chapter-8",
+      "format": "md"
+    },
+    {
       "path": "preprints/es/Chapter_9_Anatomia_Genio.md",
       "name": "es-chapter-9",
       "format": "md"
@@ -93,6 +133,11 @@
       "format": "md"
     },
     {
+      "path": "preprints/fr/Chapter_9_Anatomie_Genie.md",
+      "name": "fr-chapter-9",
+      "format": "md"
+    },
+    {
       "path": "preprints/es/Chapter_10_Sinfonia_Neuronal.md",
       "name": "es-chapter-10",
       "format": "md"
@@ -100,6 +145,11 @@
     {
       "path": "preprints/en/Chapter_10_Neuronal_Symphony.md",
       "name": "en-chapter-10",
+      "format": "md"
+    },
+    {
+      "path": "preprints/fr/Chapter_10_Symphonie_Neuronale.md",
+      "name": "fr-chapter-10",
       "format": "md"
     }
   ],

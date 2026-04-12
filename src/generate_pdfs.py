@@ -9,7 +9,13 @@ class PDF(FPDF):
     def footer(self):
         self.set_y(-15)
         self.set_font("LiberationSerif", "I", 8)
-        self.cell(0, 10, f"Page {self.page_no()}" if self.lang == "en" else f"Página {self.page_no()}", align="C")
+        if self.lang == "en":
+            text = f"Page {self.page_no()}"
+        elif self.lang == "fr":
+            text = f"Page {self.page_no()}"
+        else:
+            text = f"Página {self.page_no()}"
+        self.cell(0, 10, text, align="C")
 
 def markdown_to_pdf(md_filepath, pdf_filepath, lang="es"):
     with open(md_filepath, "r", encoding="utf-8") as f:
@@ -69,7 +75,6 @@ def process_directory(lang):
         if filename.endswith(".md"):
             md_path = os.path.join(preprints_dir, filename)
             topic = filename.replace("Chapter_", "").replace(".md", "")
-            # Handle potential numbering/prefix in filename
             topic_clean = topic.split("_", 1)[1] if "_" in topic else topic
 
             pdf_filename = f"Preprint_Neuro_{topic_clean}_JuanMoisésdelaSerna.pdf"
@@ -81,6 +86,7 @@ def process_directory(lang):
 def main():
     process_directory("es")
     process_directory("en")
+    process_directory("fr")
 
 if __name__ == "__main__":
     main()
