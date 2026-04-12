@@ -1,55 +1,105 @@
 {
   "name": "neuroscience-math-cognition-preprints",
-  "title": "Meta-análisis sobre Neurociencia y Educación Matemática",
+  "title": "Bilingual Meta-Analyses on Neuroscience and Mathematics Education",
   "resources": [
     {
-      "path": "preprints/Chapter_1_Instinto_Numerico.md",
-      "name": "chapter-1",
+      "path": "preprints/es/Chapter_1_Instinto_Numerico.md",
+      "name": "es-chapter-1",
       "format": "md"
     },
     {
-      "path": "preprints/Chapter_2_Geografia_Calculo.md",
-      "name": "chapter-2",
+      "path": "preprints/en/Chapter_1_Number_Instinct.md",
+      "name": "en-chapter-1",
       "format": "md"
     },
     {
-      "path": "preprints/Chapter_3_Bloques_Ecuaciones.md",
-      "name": "chapter-3",
+      "path": "preprints/es/Chapter_2_Geografia_Calculo.md",
+      "name": "es-chapter-2",
       "format": "md"
     },
     {
-      "path": "preprints/Chapter_4_Duelo_Cerebral.md",
-      "name": "chapter-4",
+      "path": "preprints/en/Chapter_2_Geography_Calculation.md",
+      "name": "en-chapter-2",
       "format": "md"
     },
     {
-      "path": "preprints/Chapter_5_Atajo_Memoria.md",
-      "name": "chapter-5",
+      "path": "preprints/es/Chapter_3_Bloques_Ecuaciones.md",
+      "name": "es-chapter-3",
       "format": "md"
     },
     {
-      "path": "preprints/Chapter_6_Panico_Numeros.md",
-      "name": "chapter-6",
+      "path": "preprints/en/Chapter_3_From_Blocks_to_Equations.md",
+      "name": "en-chapter-3",
       "format": "md"
     },
     {
-      "path": "preprints/Chapter_7_Cerebro_Desconectado.md",
-      "name": "chapter-7",
+      "path": "preprints/es/Chapter_4_Duelo_Cerebral.md",
+      "name": "es-chapter-4",
       "format": "md"
     },
     {
-      "path": "preprints/Chapter_8_Gimnasio_Mental.md",
-      "name": "chapter-8",
+      "path": "preprints/en/Chapter_4_Cerebral_Duel.md",
+      "name": "en-chapter-4",
       "format": "md"
     },
     {
-      "path": "preprints/Chapter_9_Anatomia_Genio.md",
-      "name": "chapter-9",
+      "path": "preprints/es/Chapter_5_Atajo_Memoria.md",
+      "name": "es-chapter-5",
       "format": "md"
     },
     {
-      "path": "preprints/Chapter_10_Sinfonia_Neuronal.md",
-      "name": "chapter-10",
+      "path": "preprints/en/Chapter_5_Memory_Shortcut.md",
+      "name": "en-chapter-5",
+      "format": "md"
+    },
+    {
+      "path": "preprints/es/Chapter_6_Panico_Numeros.md",
+      "name": "es-chapter-6",
+      "format": "md"
+    },
+    {
+      "path": "preprints/en/Chapter_6_Amygdala_Math_Anxiety.md",
+      "name": "en-chapter-6",
+      "format": "md"
+    },
+    {
+      "path": "preprints/es/Chapter_7_Cerebro_Desconectado.md",
+      "name": "es-chapter-7",
+      "format": "md"
+    },
+    {
+      "path": "preprints/en/Chapter_7_Disconnected_Brain.md",
+      "name": "en-chapter-7",
+      "format": "md"
+    },
+    {
+      "path": "preprints/es/Chapter_8_Gimnasio_Mental.md",
+      "name": "es-chapter-8",
+      "format": "md"
+    },
+    {
+      "path": "preprints/en/Chapter_8_Mental_Gym.md",
+      "name": "en-chapter-8",
+      "format": "md"
+    },
+    {
+      "path": "preprints/es/Chapter_9_Anatomia_Genio.md",
+      "name": "es-chapter-9",
+      "format": "md"
+    },
+    {
+      "path": "preprints/en/Chapter_9_Anatomy_Genius.md",
+      "name": "en-chapter-9",
+      "format": "md"
+    },
+    {
+      "path": "preprints/es/Chapter_10_Sinfonia_Neuronal.md",
+      "name": "es-chapter-10",
+      "format": "md"
+    },
+    {
+      "path": "preprints/en/Chapter_10_Neuronal_Symphony.md",
+      "name": "en-chapter-10",
       "format": "md"
     }
   ],

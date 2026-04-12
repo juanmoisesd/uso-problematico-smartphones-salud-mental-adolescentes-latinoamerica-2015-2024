@@ -9,13 +9,14 @@ class PDF(FPDF):
     def footer(self):
         self.set_y(-15)
         self.set_font("LiberationSerif", "I", 8)
-        self.cell(0, 10, f"Página {self.page_no()}", align="C")
+        self.cell(0, 10, f"Page {self.page_no()}" if self.lang == "en" else f"Página {self.page_no()}", align="C")
 
-def markdown_to_pdf(md_filepath, pdf_filepath):
+def markdown_to_pdf(md_filepath, pdf_filepath, lang="es"):
     with open(md_filepath, "r", encoding="utf-8") as f:
         content = f.read()
 
     pdf = PDF(orientation="P", unit="mm", format="A4")
+    pdf.lang = lang
     pdf.set_margins(20, 20, 20)
 
     # Register Fonts
@@ -27,7 +28,6 @@ def markdown_to_pdf(md_filepath, pdf_filepath):
 
     pdf.add_page()
 
-    # Use a fixed width for cells to avoid "0" width issues
     cell_width = pdf.w - 2 * pdf.l_margin
 
     lines = content.split("\n")
@@ -60,28 +60,27 @@ def markdown_to_pdf(md_filepath, pdf_filepath):
 
     pdf.output(pdf_filepath)
 
-def main():
-    preprints_dir = "preprints"
-    topics_map = {
-        "Chapter_1_Instinto_Numerico.md": "Instinto_Numerico",
-        "Chapter_2_Geografia_Calculo.md": "Geografia_Calculo",
-        "Chapter_3_Bloques_Ecuaciones.md": "Bloques_Ecuaciones",
-        "Chapter_4_Duelo_Cerebral.md": "Duelo_Cerebral",
-        "Chapter_5_Atajo_Memoria.md": "Atajo_Memoria",
-        "Chapter_6_Panico_Numeros.md": "Panico_Numeros",
-        "Chapter_7_Cerebro_Desconectado.md": "Cerebro_Desconectado",
-        "Chapter_8_Gimnasio_Mental.md": "Gimnasio_Mental",
-        "Chapter_9_Anatomia_Genio.md": "Anatomia_Genio",
-        "Chapter_10_Sinfonia_Neuronal.md": "Sinfonia_Neuronal"
-    }
+def process_directory(lang):
+    preprints_dir = f"preprints/{lang}"
+    if not os.path.exists(preprints_dir):
+        return
 
-    for filename, topic in topics_map.items():
-        md_path = os.path.join(preprints_dir, filename)
-        if os.path.exists(md_path):
-            pdf_filename = f"Preprint_Neuro_{topic}_JuanMoisésdelaSerna.pdf"
+    for filename in os.listdir(preprints_dir):
+        if filename.endswith(".md"):
+            md_path = os.path.join(preprints_dir, filename)
+            topic = filename.replace("Chapter_", "").replace(".md", "")
+            # Handle potential numbering/prefix in filename
+            topic_clean = topic.split("_", 1)[1] if "_" in topic else topic
+
+            pdf_filename = f"Preprint_Neuro_{topic_clean}_JuanMoisésdelaSerna.pdf"
             pdf_path = os.path.join(preprints_dir, pdf_filename)
+
             print(f"Generating {pdf_path}...")
-            markdown_to_pdf(md_path, pdf_path)
+            markdown_to_pdf(md_path, pdf_path, lang=lang)
+
+def main():
+    process_directory("es")
+    process_directory("en")
 
 if __name__ == "__main__":
     main()

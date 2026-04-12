@@ -1,7 +1,7 @@
 import os
 import re
 
-def validate_preprint(filepath):
+def validate_preprint(filepath, lang="es"):
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -12,47 +12,59 @@ def validate_preprint(filepath):
         errors.append("Author name missing or incorrect.")
 
     # Check PRISMA structure
-    sections = ["Resumen", "Palabras clave", "Introducción", "Métodos", "Resultados", "Discusión", "Conclusiones", "Referencias", "Future Directions"]
+    if lang == "es":
+        sections = ["Resumen", "Palabras clave", "Introducción", "Métodos", "Resultados", "Discusión", "Conclusiones", "Referencias", "Future Directions"]
+    else:
+        sections = ["Abstract", "Keywords", "Introduction", "Methods", "Results", "Discussion", "Conclusions", "References", "Future Directions"]
+
     for section in sections:
         if section not in content:
             errors.append(f"Section '{section}' missing.")
 
-    # Check number of citations (20-30)
-    # References are numbered in the format "1. ", "2. ", etc.
-    refs = re.findall(r"\d+\.\s+\w+", content)
-    num_refs = len(refs)
-    if num_refs < 20 or num_refs > 30:
-        # Some citations might not be numbered if formatting varied slightly,
-        # but our drafts used 25. Let's count lines in References section.
-        ref_section = content.split("### 8. Referencias")[-1].split("---")[0]
-        lines = [l for l in ref_section.strip().split("\n") if l.strip()]
+    # Check number of citations (20-30 for ES, 30+ for EN)
+    ref_header = "### 8. Referencias" if lang == "es" else "### 8. References"
+    if ref_header in content:
+        ref_section = content.split(ref_header)[-1].split("---")[0]
+        lines = [l for l in ref_section.strip().split("\n") if l.strip() and re.match(r"\d+\.", l.strip())]
         num_refs = len(lines)
-        if num_refs < 20:
-             errors.append(f"Insufficient citations: found {num_refs}, expected 20-30.")
+        min_refs = 20 if lang == "es" else 30
+        if num_refs < min_refs:
+             errors.append(f"Insufficient citations: found {num_refs}, expected >= {min_refs}.")
+    else:
+        errors.append(f"References header '{ref_header}' missing.")
 
     # Check cross-citations
-    cross_cites = re.findall(r"Capítulo \d+", content)
+    cite_pattern = r"Capítulo \d+" if lang == "es" else r"Chapter \d+"
+    cross_cites = re.findall(cite_pattern, content)
     if len(cross_cites) < 2:
         errors.append(f"Insufficient cross-citations: found {len(cross_cites)}, expected >= 2.")
 
     return errors
 
-def main():
-    preprints_dir = "preprints"
+def validate_dir(lang):
+    preprints_dir = f"preprints/{lang}"
+    if not os.path.exists(preprints_dir):
+        return True
+
     all_passed = True
     for filename in os.listdir(preprints_dir):
         if filename.endswith(".md"):
             path = os.path.join(preprints_dir, filename)
-            errors = validate_preprint(path)
+            errors = validate_preprint(path, lang=lang)
             if errors:
-                print(f"FAILED: {filename}")
+                print(f"FAILED [{lang}]: {filename}")
                 for err in errors:
                     print(f"  - {err}")
                 all_passed = False
             else:
-                print(f"PASSED: {filename}")
+                print(f"PASSED [{lang}]: {filename}")
+    return all_passed
 
-    if not all_passed:
+def main():
+    es_ok = validate_dir("es")
+    en_ok = validate_dir("en")
+
+    if not (es_ok and en_ok):
         exit(1)
 
 if __name__ == "__main__":

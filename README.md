@@ -58,12 +58,25 @@ The project addresses key questions in the field of neuroscience and social scie
 - `data/`: Contains the datasets used in this research.
 - `src/`: Source code for data processing and analysis.
 - `results/`: Output files, figures, and metrics.
-- `preprints/`: Scientific meta-analyses (PDF and Markdown) on neuroeducation and mathematical cognition.
+- `preprints/`: Scientific meta-analyses (PDF and Markdown) in English and Spanish on neuroeducation and mathematical cognition.
 
-## Preprints: Neurociencia y Educación Matemática
+## Preprints: Neurociencia y Educación Matemática / Neuroscience and Math Education
 
-Esta sección contiene una serie de metaanálisis científicos desarrollados por Juan Moisés de la Serna sobre la neurobiología del aprendizaje matemático:
+Esta colección bilingüe contiene 20 metaanálisis científicos (10 en español, 10 en inglés) desarrollados por **Juan Moisés de la Serna** siguiendo las directrices PRISMA.
 
+### English Collection (Professional Academic Format)
+1. **The Number Instinct**: Innate perception of quantities in humans and animals.
+2. **The Geography of Calculation**: Neural networks involved in mathematical processing.
+3. **From Blocks to Equations**: Neurobiological development of numerical abstraction.
+4. **The Cerebral Duel**: Interaction between intuitive and logical processing.
+5. **The Memory Shortcut**: Neuroplasticity of calculation automation.
+6. **The Amygdala and Math Anxiety**: Neurobiology of mathematics-related fear.
+7. **The Disconnected Brain**: Structural and functional alterations in dyscalculia.
+8. **The Mental Gym**: Neuroplasticity and logical capacity training.
+9. **Anatomy of a Genius**: Neurobiological differences in exceptional minds.
+10. **The Neuronal Symphony**: Mathematics as the brain's natural language.
+
+### Colección en Español
 1. **El instinto numérico**: Percepción innata de las cantidades.
 2. **La geografía del cálculo**: Áreas cerebrales involucradas en las matemáticas.
 3. **De los bloques a las ecuaciones**: Desarrollo de la abstracción numérica en la infancia.
