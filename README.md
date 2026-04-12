@@ -58,6 +58,7 @@ The project addresses key questions in the field of neuroscience and social scie
 - `data/`: Contains the datasets used in this research.
 - `src/`: Source code for data processing and analysis.
 - `results/`: Output files, figures, and metrics.
+- `preprints/`: Bilingual collection of scientific preprints on "Neurociencia de las Matemáticas / Neuroscience of Mathematics".
 
 ## Usage
 To use the resources in this repository, clone the project and ensure you have the necessary dependencies installed. Refer to the specific documentation in each folder for more details.
