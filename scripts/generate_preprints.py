@@ -1,23 +1,30 @@
 import os
 import glob
+import re
 from fpdf import FPDF
 from fpdf.enums import XPos, YPos
 
 class ManuscriptPDF(FPDF):
     def header(self):
         if self.page_no() > 1:
-            self.set_font('LiberationSerif', 'I', 8)
-            self.cell(0, 10, 'Neurociencia de las Matemáticas - Juan Moisés de la Serna', align='R', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            self.set_font('LiberationSerif', 'I', 9)
+            self.cell(0, 10, 'Neuroscience of Mathematics Collection - Juan Moisés de la Serna', align='R', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
     def footer(self):
         self.set_y(-15)
-        self.set_font('LiberationSerif', 'I', 8)
-        self.cell(0, 10, f'Página {self.page_no()}', align='C')
+        self.set_font('LiberationSerif', 'I', 9)
+        self.cell(0, 10, f'Page {self.page_no()}', align='C')
 
-def create_pdf(markdown_path, output_path):
+def clean_markdown(text):
+    # Remove Markdown links: [text](url) -> text
+    text = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', text)
+    # Remove bold/italic markers: **text** or *text* -> text
+    text = text.replace('***', '').replace('**', '').replace('*', '')
+    return text
+
+def create_pdf(markdown_path, output_path, is_en=True):
     pdf = ManuscriptPDF()
 
-    # Load Unicode fonts
     font_path = "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf"
     font_bold_path = "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf"
     font_italic_path = "/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf"
@@ -26,12 +33,10 @@ def create_pdf(markdown_path, output_path):
     pdf.add_font("LiberationSerif", "B", font_bold_path)
     pdf.add_font("LiberationSerif", "I", font_italic_path)
 
-    pdf.set_auto_page_break(auto=True, margin=15)
+    pdf.set_auto_page_break(auto=True, margin=20)
     pdf.add_page()
-
-    # Set margins explicitly to be safe
-    pdf.set_left_margin(20)
-    pdf.set_right_margin(20)
+    pdf.set_left_margin(25)
+    pdf.set_right_margin(25)
 
     with open(markdown_path, 'r', encoding='utf-8') as f:
         text_content = f.read()
@@ -41,53 +46,50 @@ def create_pdf(markdown_path, output_path):
     for line in lines:
         line = line.strip()
         if not line:
-            pdf.ln(5)
+            pdf.ln(4)
             continue
 
-        # Determine font and style
         if line.startswith("# "):
-            pdf.set_font("LiberationSerif", "B", 16)
-            text = line[2:]
-            spacing = 10
+            pdf.set_font("LiberationSerif", "B", 18)
+            text = clean_markdown(line[2:])
+            pdf.multi_cell(160, 10, text, align='C')
+            pdf.ln(5)
         elif line.startswith("## "):
             pdf.set_font("LiberationSerif", "B", 14)
-            text = line[3:]
-            spacing = 10
+            text = clean_markdown(line[3:])
+            pdf.ln(4)
+            pdf.multi_cell(160, 8, text)
+            pdf.ln(2)
         elif line.startswith("### "):
             pdf.set_font("LiberationSerif", "B", 12)
-            text = line[4:]
-            spacing = 8
+            text = clean_markdown(line[4:])
+            pdf.multi_cell(160, 7, text)
+            pdf.ln(1)
         else:
             pdf.set_font("LiberationSerif", "", 11)
-            text = line.strip("*")
-            spacing = 6
-
-        # Use a safe width (Total A4 width is 210mm, minus 40mm margins = 170mm)
-        pdf.multi_cell(170, spacing, text)
+            text = clean_markdown(line)
+            if line.startswith("- ") or (len(line) > 2 and line[0].isdigit() and line[1] == '.'):
+                 pdf.multi_cell(160, 6, text)
+            else:
+                 pdf.multi_cell(160, 6, text, align='J')
 
     pdf.output(output_path)
 
 if __name__ == "__main__":
-    manuscripts = glob.glob("preprints/manuscripts/*.md")
+    es_manuscripts = glob.glob("preprints/manuscripts/*.md")
     os.makedirs("preprints/pdfs", exist_ok=True)
-
-    mapping = {
-        "Capitulo_1_Instinto_Numerico.md": "Instinto_Numerico",
-        "Capitulo_2_Geografia_Calculo.md": "Geografia_Calculo",
-        "Capitulo_3_Aprendizaje_Infantil.md": "Aprendizaje_Infantil",
-        "Capitulo_4_Duelo_Cerebral.md": "Duelo_Cerebral",
-        "Capitulo_5_Memoria_Automatizacion.md": "Memoria_Automatizacion",
-        "Capitulo_6_Ansiedad_Matematica.md": "Ansiedad_Matematica",
-        "Capitulo_7_Discalculia.md": "Discalculia",
-        "Capitulo_8_Gimnasio_Mental.md": "Gimnasio_Mental",
-        "Capitulo_9_Anatomia_Genio.md": "Anatomia_Genio",
-        "Capitulo_10_Sinfonia_Neuronal.md": "Sinfonia_Neuronal"
-    }
-
-    for m_path in sorted(manuscripts):
+    for m_path in sorted(es_manuscripts):
         filename = os.path.basename(m_path)
-        topic = mapping.get(filename, "Topic")
-        pdf_name = f"Preprint_Neuro_{topic}_JuanMoisesdelaSerna.pdf"
+        pdf_name = f"Preprint_Neuro_{filename.replace('.md', '')}_JuanMoisesdelaSerna.pdf"
         pdf_path = os.path.join("preprints/pdfs", pdf_name)
-        print(f"Generating {pdf_path}...")
-        create_pdf(m_path, pdf_path)
+        print(f"Generating Spanish: {pdf_path}...")
+        create_pdf(m_path, pdf_path, is_en=False)
+
+    en_manuscripts = glob.glob("preprints/manuscripts_en/*.md")
+    os.makedirs("preprints/pdfs_en", exist_ok=True)
+    for m_path in sorted(en_manuscripts):
+        filename = os.path.basename(m_path)
+        pdf_name = f"Preprint_Neuro_{filename.replace('.md', '')}_JuanMoisesdelaSerna.pdf"
+        pdf_path = os.path.join("preprints/pdfs_en", pdf_name)
+        print(f"Generating English: {pdf_path}...")
+        create_pdf(m_path, pdf_path, is_en=True)
