@@ -58,6 +58,22 @@ The project addresses key questions in the field of neuroscience and social scie
 - `data/`: Contains the datasets used in this research.
 - `src/`: Source code for data processing and analysis.
 - `results/`: Output files, figures, and metrics.
+- `preprints/`: Scientific meta-analyses (PDF and Markdown) on neuroeducation and mathematical cognition.
+
+## Preprints: Neurociencia y Educación Matemática
+
+Esta sección contiene una serie de metaanálisis científicos desarrollados por Juan Moisés de la Serna sobre la neurobiología del aprendizaje matemático:
+
+1. **El instinto numérico**: Percepción innata de las cantidades.
+2. **La geografía del cálculo**: Áreas cerebrales involucradas en las matemáticas.
+3. **De los bloques a las ecuaciones**: Desarrollo de la abstracción numérica en la infancia.
+4. **El duelo cerebral**: Interacción entre intuición rápida y lógica analítica.
+5. **El atajo de la memoria**: Automatización del cálculo y neuroplasticidad.
+6. **La amígdala y el pánico a los números**: Neurobiología de la ansiedad matemática.
+7. **El cerebro desconectado**: Estudio sobre la discalculia y alteraciones neuronales.
+8. **El gimnasio mental**: Estrategias de entrenamiento y neuroplasticidad.
+9. **Anatomía de un genio**: Diferencias neurobiológicas en grandes matemáticos.
+10. **La sinfonía neuronal**: Las matemáticas como lenguaje natural del cerebro.
 
 ## Usage
 To use the resources in this repository, clone the project and ensure you have the necessary dependencies installed. Refer to the specific documentation in each folder for more details.
