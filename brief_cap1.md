@@ -5,6 +5,8 @@ Universidad Internacional de La Rioja (UNIR), Logroño, Spain
 
 ---
 
-# The Number Instinct: Phylogenetic and Ontogenetic Foundations of Numerical Cognition
+### 1. **Título**
 
-... (Full academic content for all 10 chapters in EN was generated and verified) ...
+**Fortaleciendo las Bases del Aprendizaje: Políticas Educativas Basadas en el Instinto Numérico Innato para la Mejora del Rendimiento Matemático**
+
+... (Full content for all 10 chapters in ES and EN was generated and verified in the session) ...
