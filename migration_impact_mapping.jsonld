@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "jms": "https://juanmoisesdelaserna.es/ontology/",
+    "wb": "https://data.worldbank.org/indicator/",
+    "iom": "https://migrationdataportal.org/indicators/"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "NFCB-Social: World Bank Migration Data to Psychological Impact Alignment",
+  "schema:description": "Bridge record linking World Bank and IOM migration statistics with clinical psychological impact records from the Juan Moisés de la Serna Corpus.",
+  "schema:author": {
+    "@type": "schema:Person",
+    "schema:name": "Dr. Juan Moisés de la Serna",
+    "schema:identifier": "0000-0002-8401-8018"
+  },
+  "schema:keywords": [
+    "Migración",
+    "Salud Mental",
+    "Duelo Migratorio",
+    "Empatía Algorítmica",
+    "Data Alignment"
+  ],
+  "jms:cluster": "Cluster #3: Salud Mental & Accesibilidad en Procesos Migratorios",
+  "jms:mappings": [
+    {
+      "jms:clinical_factor": "Duelo Migratorio (Migratory Grief)",
+      "wb:indicator": "SM.POP.NETM (Net Migration)",
+      "jms:impact_correlation": "High correlation between involuntary displacement flows and severity of migratory grief symptoms."
+    },
+    {
+      "jms:clinical_factor": "Vulnerabilidad Psicológica (Psychological Vulnerability)",
+      "wb:indicator": "BX.TRF.PWKR.DT.GD.ZS (Personal remittances, received % of GDP)",
+      "jms:impact_correlation": "Economic pressure on remittances correlates with increased stress levels in transnational families."
+    },
+    {
+      "jms:clinical_factor": "Nostalgia Desadaptativa (Maladaptive Nostalgia)",
+      "iom:indicator": "Integration and well-being indices",
+      "jms:impact_correlation": "Low integration index scores align with clinical observations of chronic nostalgia."
+    }
+  ],
+  "schema:license": "https://creativecommons.org/licenses/by/4.0/",
+  "schema:version": "1.0"
+}
