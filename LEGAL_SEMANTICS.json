@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "DefinedTermSet",
+  "name": "JMS Cognitive Legal Semantics for GDPR Compliance",
+  "description": "Scientific definitions of legal terms under the Cognitive Compliance Framework, mapping EUR-Lex transparency requirements to neuroscientific metrics.",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Transparency",
+      "description": "Absence of cognitive overload in the processing of legal information. Measured by the delta between information density and the user's working memory capacity.",
+      "termCode": "JMS-COG-01"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Informed Consent",
+      "description": "A voluntary decision-making process validated by the cognitive capture of key risk-benefit variables, verified through reading-time-to-complexity ratios (Metric A).",
+      "termCode": "JMS-COG-02"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Cognitive Accessibility",
+      "description": "The degree to which legal policies are readable for neurodiverse populations. Measured by the JMS Readability Index for Cognitive Diversity (Metric B).",
+      "termCode": "JMS-COG-03"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Data Protection by Design (Cognitive)",
+      "description": "The architectural implementation of privacy controls that respect the neurophysiological limits of human attention and executive function.",
+      "termCode": "JMS-COG-04"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Informed Capacity",
+      "description": "The neurophysiological state required for legal understanding, verified via arousal and attention metrics during policy interaction (Metric C).",
+      "termCode": "JMS-COG-05"
+    }
+  ]
+}
