@@ -49,7 +49,7 @@ def publish():
                 content = f.read()
 
             # Replace common DOI placeholders
-            updated_content = content.replace("[TU_DOI]", doi).replace("10.5281/zenodo.19145316", doi)
+            updated_content = content.replace("[TU_DOI]", doi).replace("[TU_ID]", str(dep_id)).replace("10.5281/zenodo.19145316", doi)
 
             with open(filename, "w") as f:
                 f.write(updated_content)
