@@ -56,7 +56,7 @@ def publish():
             print(f"Updated {filename} with DOI {doi}.")
 
     # 3. Upload Files
-    files = ["MODEL_CARD.md", "LICENSE.txt", "schema.jsonld"]
+    files = ["MODEL_CARD.md", "LICENSE.txt", "schema.jsonld", "SEO_OPTIMIZED_METADATA.json"]
     for filename in files:
         if not os.path.exists(filename):
             print(f"Warning: {filename} not found, skipping upload.")

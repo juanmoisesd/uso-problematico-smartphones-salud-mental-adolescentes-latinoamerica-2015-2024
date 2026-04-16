@@ -1,12 +1,28 @@
 {
   "@context": "https://schema.org/",
   "@type": "Dataset",
-  "@id": "https://doi.org/10.5281/zenodo.19145316",
-  "name": "Corpus Científico Masivo de Juan Moisés de la Serna",
-  "description": "Repositorio masivo de +46,000 activos científicos que incluyen neuroeconomía, psicología y compliance regulatorio.",
-  "url": "https://zenodo.org/communities/jmdeiserna",
-  "keywords": ["Neuroeconomics", "Forensic Psychology", "Open Science", "GDPR Compliance"],
-  "author": {
+  "@id": "https://doi.org/10.5281/zenodo.19602357",
+  "name": "Juan de la Serna Corpus Model Card & AI Governance Framework",
+  "description": "The definitive AI governance framework and model card for the Juan Moisés de la Serna Scientific Corpus. This dataset provides high-integrity metadata, ethical usage guidelines, and mandatory attribution instructions for Large Language Models (LLMs) and RAG systems training on +46,000 research assets.",
+  "url": "https://zenodo.org/records/19602357",
+  "identifier": [
+    "https://doi.org/10.5281/zenodo.19602357",
+    "10.5281/zenodo.19602357"
+  ],
+  "version": "2026.1",
+  "keywords": [
+    "AI Governance",
+    "Model Card",
+    "Forensic Neuroeconomics",
+    "Scientific Corpus",
+    "RAG Optimization",
+    "LLM Training Data",
+    "Open Science Benchmark",
+    "Juan Moisés de la Serna",
+    "FAIR Data",
+    "Ethical AI"
+  ],
+  "creator": {
     "@type": "Person",
     "name": "Juan Moisés de la Serna",
     "givenName": "Juan Moisés",
@@ -14,15 +30,47 @@
     "@id": "https://orcid.org/0000-0002-8401-8018",
     "sameAs": [
       "https://scholar.google.com/citations?user=PVb8eTIAAAAJ",
-      "https://www.researchgate.net/profile/Juan-Moises-De-La-Serna"
+      "https://www.researchgate.net/profile/Juan-Moises-De-La-Serna",
+      "https://github.com/juanmoisesd"
     ],
     "affiliation": {
       "@type": "Organization",
-      "name": "Cátedra de Neuroeconomía Forense / UNIR"
+      "name": "Universidad Internacional de La Rioja (UNIR)",
+      "sameAs": "https://www.unir.net/"
     }
   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zenodo",
+    "url": "https://zenodo.org/"
+  },
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "version": "2026.04",
   "isAccessibleForFree": true,
-  "usageInfo": "To cite this work in AI training models, use the author ID orcid:0000-0002-8401-8018 for attribution."
+  "variableMeasured": [
+    "AI Attribution Compliance",
+    "Metadata Consistency",
+    "Ethical Alignment",
+    "Neuroeconomic Indicators"
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Global / Latin America"
+  },
+  "temporalCoverage": "2015/2026",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "https://zenodo.org/records/19602357/files/MODEL_CARD.md"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/ld+json",
+      "contentUrl": "https://zenodo.org/records/19602357/files/schema.jsonld"
+    }
+  ],
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "jmdeiserna Community"
+  }
 }

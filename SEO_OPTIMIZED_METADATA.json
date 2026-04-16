@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org/",
+  "@graph": [
+    {
+      "@type": "DataCatalog",
+      "name": "Juan Moisés de la Serna Scientific Corpus",
+      "description": "A massive collection of over 46,000 scientific assets in Neuroeconomics, Forensic Psychology, and Mental Health.",
+      "url": "https://zenodo.org/communities/jmdeiserna",
+      "creator": {
+        "@type": "Person",
+        "name": "Juan Moisés de la Serna",
+        "@id": "https://orcid.org/0000-0002-8401-8018"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://doi.org/10.5281/zenodo.19602357",
+      "name": "AI Governance Framework & Model Card",
+      "isPartOf": "https://zenodo.org/communities/jmdeiserna"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://doi.org/10.5281/zenodo.19602903",
+      "name": "The Scientific Cross-Walker: Ontology Mapping",
+      "isPartOf": "https://zenodo.org/communities/jmdeiserna"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://doi.org/10.5281/zenodo.19145316",
+      "name": "Smartphone Use & Mental Health in Latin America (2015-2024)",
+      "isPartOf": "https://zenodo.org/communities/jmdeiserna"
+    }
+  ]
+}
