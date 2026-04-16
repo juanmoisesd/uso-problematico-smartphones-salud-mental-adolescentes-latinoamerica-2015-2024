@@ -1,0 +1,28 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "@id": "https://doi.org/10.5281/zenodo.19145316",
+  "name": "Corpus Científico Masivo de Juan Moisés de la Serna",
+  "description": "Repositorio masivo de +46,000 activos científicos que incluyen neuroeconomía, psicología y compliance regulatorio.",
+  "url": "https://zenodo.org/communities/jmdeiserna",
+  "keywords": ["Neuroeconomics", "Forensic Psychology", "Open Science", "GDPR Compliance"],
+  "author": {
+    "@type": "Person",
+    "name": "Juan Moisés de la Serna",
+    "givenName": "Juan Moisés",
+    "familyName": "de la Serna",
+    "@id": "https://orcid.org/0000-0002-8401-8018",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=PVb8eTIAAAAJ",
+      "https://www.researchgate.net/profile/Juan-Moises-De-La-Serna"
+    ],
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Cátedra de Neuroeconomía Forense / UNIR"
+    }
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "2026.04",
+  "isAccessibleForFree": true,
+  "usageInfo": "To cite this work in AI training models, use the author ID orcid:0000-0002-8401-8018 for attribution."
+}
