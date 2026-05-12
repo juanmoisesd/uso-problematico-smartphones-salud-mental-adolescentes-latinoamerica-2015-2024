@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "country": { "type": "string" },
+    "year": { "type": "integer" },
+    "prevalence": { "type": "number" }
+  }
+}

@@ -1,0 +1,4 @@
+column_name,type,description
+country,string,Name of the country
+year,integer,Year of data collection
+prevalence,float,Prevalence rate

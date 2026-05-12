@@ -1,0 +1,23 @@
+{
+  "data": {
+    "type": "datasets",
+    "attributes": {
+      "doi": "10.5281/zenodo.19145316",
+      "creators": [
+        {
+          "name": "de la Serna Tuya, Juan Moisés"
+        }
+      ],
+      "titles": [
+        {
+          "title": "Uso Problemático de Smartphones y Salud Mental en Adolescentes de América Latina (2015–2024)"
+        }
+      ],
+      "publisher": "Zenodo",
+      "publicationYear": 2024,
+      "types": {
+        "resourceTypeGeneral": "Dataset"
+      }
+    }
+  }
+}
