@@ -58,6 +58,47 @@ The project addresses key questions in the field of neuroscience and social scie
 - `data/`: Contains the datasets used in this research.
 - `src/`: Source code for data processing and analysis.
 - `results/`: Output files, figures, and metrics.
+- `preprints/`: Scientific meta-analyses (PDF and Markdown) in English and Spanish on neuroeducation and mathematical cognition.
+
+## Preprints: Neurociencia y Educación Matemática / Neuroscience and Math Education
+
+Esta colección trilingüe contiene 30 metaanálisis científicos (10 en español, 10 en inglés, 10 en francés) desarrollados por **Juan Moisés de la Serna** siguiendo las directrices PRISMA.
+
+### English Collection (Professional Academic Format)
+1. **The Number Instinct**: Innate perception of quantities in humans and animals.
+2. **The Geography of Calculation**: Neural networks involved in mathematical processing.
+3. **From Blocks to Equations**: Neurobiological development of numerical abstraction.
+4. **The Cerebral Duel**: Interaction between intuitive and logical processing.
+5. **The Memory Shortcut**: Neuroplasticity of calculation automation.
+6. **The Amygdala and Math Anxiety**: Neurobiology of mathematics-related fear.
+7. **The Disconnected Brain**: Structural and functional alterations in dyscalculia.
+8. **The Mental Gym**: Neuroplasticity and logical capacity training.
+9. **Anatomy of a Genius**: Neurobiological differences in exceptional minds.
+10. **The Neuronal Symphony**: Mathematics as the brain's natural language.
+
+### Collection en Français (Format Académique)
+1. **L'instinct numérique** : Perception innée des quantités chez l'homme et l'animal.
+2. **La géographie du calcul** : Réseaux neuronaux impliqués dans le traitement mathématique.
+3. **Des blocs aux équations** : Développement neurobiologique de l'abstraction numérique.
+4. **Le duel cérébral** : Interaction entre systèmes intuitif et logique.
+5. **Le raccourci de la mémoire** : Neuroplasticité de l'automatisation du calcul.
+6. **L'amygdale et la panique des chiffres** : Neurobiologie de l'anxiété mathématique.
+7. **Le cerveau déconnecté** : Dyscalculie développementale et altérations neuronales.
+8. **Le gymnase mental** : Entraînement des capacités logiques et neuroplasticité.
+9. **Anatomie d'un génie** : Différences neurobiologiques chez les esprits exceptionnels.
+10. **La symphonie neuronale** : Les mathématiques comme langage naturel du cerveau.
+
+### Colección en Español
+1. **El instinto numérico**: Percepción innata de las cantidades.
+2. **La geografía del cálculo**: Áreas cerebrales involucradas en las matemáticas.
+3. **De los bloques a las ecuaciones**: Desarrollo de la abstracción numérica en la infancia.
+4. **El duelo cerebral**: Interacción entre intuición rápida y lógica analítica.
+5. **El atajo de la memoria**: Automatización del cálculo y neuroplasticidad.
+6. **La amígdala y el pánico a los números**: Neurobiología de la ansiedad matemática.
+7. **El cerebro desconectado**: Estudio sobre la discalculia y alteraciones neuronales.
+8. **El gimnasio mental**: Estrategias de entrenamiento y neuroplasticidad.
+9. **Anatomía de un genio**: Diferencias neurobiológicas en grandes matemáticos.
+10. **La sinfonía neuronal**: Las matemáticas como lenguaje natural del cerebro.
 
 ## Usage
 To use the resources in this repository, clone the project and ensure you have the necessary dependencies installed. Refer to the specific documentation in each folder for more details.
