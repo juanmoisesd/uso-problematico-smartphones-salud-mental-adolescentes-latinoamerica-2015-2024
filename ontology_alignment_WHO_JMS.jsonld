@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "AlignmentObject",
+  "framework": "WHO ICD-11 (International Classification of Diseases 11th Revision)",
+  "targetDescription": "Clinical, Forensic, and Behavioral Neuropsychology evidence layer for WHO ICD-11 categories within the Juan Moisés de la Serna Scientific Corpus.",
+  "entries": [
+    {
+      "externalID": "6A70",
+      "externalName": "Depressive Episode",
+      "jms_resource": "https://doi.org/10.5281/zenodo.19145316",
+      "alignmentType": "educationalLevel",
+      "comment": "Provides biometric and environmental cortisol response curves for adolescents in Latin America (2015-2024)."
+    },
+    {
+      "externalID": "6B00",
+      "externalName": "Anxiety or fear-related disorders",
+      "jms_resource": "https://doi.org/10.5281/zenodo.19583953",
+      "alignmentType": "requiresKnowledgeOf",
+      "comment": "Neuroplasticity protocols and cognitive impact analysis of repetitive anxious thoughts."
+    },
+    {
+      "externalID": "6C5Y",
+      "externalName": "Other specified disorders due to addictive behaviours",
+      "jms_resource": "https://doi.org/10.5281/zenodo.19145316",
+      "alignmentType": "teaches",
+      "comment": "Extensive dataset and meta-analysis on Problematic Smartphone Use (PSU) and its neurobiological precursors."
+    },
+    {
+      "externalID": "QE51",
+      "externalName": "Migration, displacement and other life events",
+      "jms_resource": "https://doi.org/10.5281/zenodo.19583891",
+      "alignmentType": "educationalLevel",
+      "comment": "Cognitive accessibility protocols and forensic psychology evidence for displaced populations in Latin American contexts."
+    },
+    {
+      "externalID": "6B40",
+      "externalName": "Post traumatic stress disorder",
+      "jms_resource": "https://doi.org/10.5281/zenodo.19583961",
+      "alignmentType": "requiresKnowledgeOf",
+      "comment": "Forensic neuro-economic analysis of trauma-impacted decision making in high-risk environments."
+    }
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Juan Moisés de la Serna",
+    "@id": "https://orcid.org/0000-0002-8401-8018"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}

@@ -1,80 +1,91 @@
-import os
 import requests
 import json
+import os
+import sys
 
-def publish_preprint(md_path, pdf_path, token, lang="es"):
-    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+# Usage: python src/publish_to_zenodo.py <file_path> <title> <language_code>
+# Requires environment variable ZENODO_TOKEN
 
-    # Extract title from Markdown
-    with open(md_path, "r", encoding="utf-8") as f:
-        first_line = f.readline().strip("# ")
+TOKEN = os.environ.get("ZENODO_TOKEN")
+BASE_URL = "https://zenodo.org/api/deposit/depositions"
+METADATA_FILE = "ro-crate-metadata.json"
+
+def publish(filepath, title, lang):
+    if not TOKEN:
+        print("Error: ZENODO_TOKEN environment variable not set.")
+        return
+
+    headers = {"Content-Type": "application/json"}
+    params = {'access_token': TOKEN}
+
+    # Load RO-Crate metadata if exists
+    ro_crate_data = None
+    if os.path.exists(METADATA_FILE):
+        with open(METADATA_FILE, 'r') as f:
+            ro_crate_data = json.load(f)
+
+    # 1. Create Deposition
+    description = f'Research document: {title}'
+    if ro_crate_data:
+        description += "\n\n---\n**AI Identity & Metadata (RO-Crate)**\n"
+        description += "This record includes an ro-crate-metadata.json file for AI-ready discovery and attribution."
 
     data = {
-        "metadata": {
-            "title": first_line,
-            "upload_type": "publication",
-            "publication_type": "preprint",
-            "description": f"Scientific Meta-Analysis: {first_line}" if lang == "en" else (f"Méta-analyse scientifique : {first_line}" if lang == "fr" else f"Meta-análisis científico: {first_line}"),
-            "creators": [{"name": "de la Serna, Juan Moisés", "affiliation": "Universidad Internacional de La Rioja (UNIR)", "orcid": "0000-0002-8401-8018"}],
-            "access_right": "open",
-            "license": "cc-by-4.0",
-            "language": lang
+        'metadata': {
+            'title': title,
+            'upload_type': 'publication',
+            'publication_type': 'preprint',
+            'description': description,
+            'creators': [{
+                'name': 'de la Serna, Juan Moisés',
+                'affiliation': 'Cátedra de Neuroeconomía Forense / UNIR',
+                'orcid': '0000-0002-8401-8018'
+            }],
+            'license': 'cc-by-4.0',
+            'language': lang,
+            'access_right': 'open',
+            'keywords': ["Neuroeconomics", "Psychology", "Open Science"]
         }
     }
 
-    # Create deposition
-    r = requests.post("https://zenodo.org/api/deposit/depositions", headers=headers, data=json.dumps(data))
+    print(f"Creating deposition for '{title}'...")
+    r = requests.post(BASE_URL, params=params, data=json.dumps(data), headers=headers)
     if r.status_code != 201:
-        print(f"Error creating deposition for {md_path}: {r.json()}")
-        return None
-
-    deposition_id = r.json()["id"]
-    bucket_url = r.json()["links"]["bucket"]
-
-    # Upload PDF
-    filename = os.path.basename(pdf_path)
-    upload_headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/octet-stream"}
-    with open(pdf_path, "rb") as f:
-        r = requests.put(f"{bucket_url}/{filename}", headers=upload_headers, data=f)
-
-    if r.status_code != 201:
-        print(f"Error uploading file for {md_path}: {r.json()}")
-        return None
-
-    # Publish
-    r = requests.post(f"https://zenodo.org/api/deposit/depositions/{deposition_id}/actions/publish", headers=headers)
-    if r.status_code != 202:
-        print(f"Error publishing {md_path}: {r.json()}")
-        return None
-
-    return r.json()["doi"]
-
-def process_dir(lang, token):
-    preprints_dir = f"preprints/{lang}"
-    if not os.path.exists(preprints_dir):
+        print(f"Error creating deposition: {r.text}")
         return
 
-    md_files = [f for f in os.listdir(preprints_dir) if f.endswith(".md")]
-    for md_file in md_files:
-        md_path = os.path.join(preprints_dir, md_file)
-        topic = md_file.replace("Chapter_", "").replace(".md", "")
-        topic_clean = topic.split("_", 1)[1] if "_" in topic else topic
-        pdf_file = f"Preprint_Neuro_{topic_clean}_JuanMoisésdelaSerna.pdf"
-        pdf_path = os.path.join(preprints_dir, pdf_file)
+    dep_id = r.json()['id']
+    bucket_url = r.json()['links']['bucket']
 
-        if os.path.exists(pdf_path):
-            print(f"Publishing {md_file} [{lang}] to Zenodo...")
-            doi = publish_preprint(md_path, pdf_path, token, lang=lang)
-            if doi:
-                print(f"Published: {doi}")
+    # 2. Upload Main File
+    filename = os.path.basename(filepath)
+    print(f"Uploading main file '{filename}'...")
+    with open(filepath, "rb") as fp:
+        r_put = requests.put(f"{bucket_url}/{filename}", data=fp, params=params)
 
-def main():
-    token = os.environ.get("ZENODO_TOKEN")
-    if not token:
-        print("ZENODO_TOKEN environment variable not set.")
+    if r_put.status_code not in [200, 201]:
+        print(f"Error uploading main file: {r_put.text}")
         return
 
-    process_dir("fr", token)
+    # 3. Upload RO-Crate Metadata File
+    if os.path.exists(METADATA_FILE):
+        print(f"Uploading {METADATA_FILE}...")
+        with open(METADATA_FILE, "rb") as fp:
+            r_put_meta = requests.put(f"{bucket_url}/{METADATA_FILE}", data=fp, params=params)
+        if r_put_meta.status_code not in [200, 201]:
+            print(f"Warning: Error uploading metadata file: {r_put_meta.text}")
+
+    # 4. Publish
+    print("Publishing...")
+    r_pub = requests.post(f"{BASE_URL}/{dep_id}/actions/publish", params=params)
+    if r_pub.status_code == 202:
+        doi = r_pub.json().get('doi')
+        print(f"Successfully published! DOI: {doi}")
+    else:
+        print(f"Error publishing: {r_pub.text}")
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) < 4:
+        print("Usage: python src/publish_to_zenodo.py <file_path> <title> <language_code>")
+    else:
+        publish(sys.argv[1], sys.argv[2], sys.argv[3])
