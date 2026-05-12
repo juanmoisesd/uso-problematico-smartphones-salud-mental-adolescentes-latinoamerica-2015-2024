@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Digital Mental Health Observatory LATAM</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.6}
+header{background:linear-gradient(135deg,#0d1b2a,#0d1117 50%,#1a0a0a);border-bottom:1px solid #30363d;padding:60px 20px 44px;text-align:center}
+.logo{font-size:3rem;margin-bottom:14px}
+header h1{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;color:#ff7b72;max-width:920px;margin:0 auto 10px}
+header h2{font-size:clamp(0.9rem,1.8vw,1.05rem);color:#ffa657;font-weight:400;margin-bottom:16px}
+header p{color:#8b949e;font-size:.97rem;max-width:700px;margin:0 auto 28px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.badge{background:#21262d;border:1px solid #30363d;border-radius:20px;padding:5px 13px;font-size:.82rem;color:#8b949e}
+.badge a{color:#ff7b72;text-decoration:none}
+nav{background:#161b22;border-bottom:1px solid #30363d;padding:10px 20px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;position:sticky;top:0;z-index:10}
+nav a{color:#8b949e;text-decoration:none;font-size:.86rem;padding:5px 10px;border-radius:6px;transition:all .2s}
+nav a:hover{color:#ff7b72;background:#21262d}
+main{max-width:1100px;margin:0 auto;padding:40px 20px}
+h2.sec{font-size:1.35rem;color:#e6edf3;border-bottom:1px solid #30363d;padding-bottom:10px;margin:52px 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px;margin:20px 0}
+.card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px;transition:border-color .2s,transform .2s;display:flex;flex-direction:column}
+.card:hover{border-color:#ff7b72;transform:translateY(-2px)}
+.card-icon{font-size:1.7rem;margin-bottom:9px}.card h3{color:#e6edf3;font-size:.98rem;margin-bottom:6px}.card p{color:#8b949e;font-size:.86rem;flex:1}
+.card a{color:#ff7b72;text-decoration:none;font-size:.86rem;margin-top:10px;display:inline-block}
+table.info{width:100%;border-collapse:collapse;background:#161b22;border-radius:10px;overflow:hidden;border:1px solid #30363d;margin:16px 0}
+table.info th,table.info td{padding:12px 16px;text-align:left;border-bottom:1px solid #30363d}
+table.info th{background:#21262d;color:#8b949e;font-size:.8rem;text-transform:uppercase}
+table.info td{color:#e6edf3;font-size:.9rem}table.info tr:last-child td{border-bottom:none}table.info a{color:#ff7b72;text-decoration:none}
+.callout{background:#3d1f1f22;border:1px solid #ff7b7244;border-radius:8px;padding:14px 18px;margin:16px 0;color:#ffa657;font-size:.92rem}
+.icard{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:5px}
+.icard .abbr{color:#ff7b72;font-size:1.1rem;font-weight:700}.icard .name{color:#e6edf3;font-size:.94rem;font-weight:600}.icard .desc{color:#8b949e;font-size:.84rem}
+.tag{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:4px;padding:2px 7px;font-size:.77rem;color:#8b949e;margin:2px}
+.cite{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;font-family:monospace;font-size:.82rem;color:#8b949e;overflow-x:auto;line-height:1.8}
+.cite a{color:#ff7b72}
+footer{background:#161b22;border-top:1px solid #30363d;padding:36px 20px;text-align:center;color:#8b949e;font-size:.86rem;margin-top:60px}
+footer a{color:#ff7b72;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">📱🧠</div>
+<h1>Digital Mental Health Observatory LATAM</h1>
+<h2>Uso Problematico de Smartphones · Salud Mental Adolescente · Latinoamerica 2015-2024</h2>
+<p>Plataforma neuropsicosocial de datos abiertos, modelos predictivos e IA explicable sobre el impacto del uso problematico de smartphones en la salud mental adolescente latinoamericana.</p>
+<div class="badges">
+<span class="badge">🔬 Observatory LATAM</span>
+<span class="badge">👥 Adolescentes 10-19</span>
+<span class="badge">📅 2015-2024</span>
+<span class="badge">📖 <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></span>
+<span class="badge">👤 <a href="https://orcid.org/0000-0002-8401-8018">ORCID</a></span>
+<span class="badge">🤖 <a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/llms.txt">llms.txt</a></span>
+</div>
+</header>
+<nav>
+<a href="#about">Acerca</a><a href="#indices">Indices</a><a href="#data">Datos</a>
+<a href="#tools">Herramientas</a><a href="#observatory">Observatorio</a>
+<a href="#ethics">Etica</a><a href="#cite">Citar</a>
+<a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024">GitHub</a>
+</nav>
+<main>
+<section id="about">
+<h2 class="sec">📌 Acerca del Proyecto</h2>
+<p style="color:#8b949e;margin-bottom:16px">Plataforma neuropsicosocial latinoamericana que consolida datos, herramientas cientificas y protocolos clinicos sobre el uso problematico de smartphones y su impacto en la salud mental de adolescentes en America Latina (2015-2024).</p>
+<div class="callout">El uso problematico de smartphones es uno de los grandes desafios de salud publica del siglo XXI. En LATAM afecta especialmente a adolescentes en contextos de alta desigualdad digital, presion academica y violencia urbana.</div>
+<table class="info">
+<tr><th>Campo</th><th>Informacion</th></tr>
+<tr><td>Autor</td><td>Juan Moises de la Serna Tuya</td></tr>
+<tr><td>Institucion</td><td>Universidad Internacional de La Rioja (UNIR)</td></tr>
+<tr><td>ORCID</td><td><a href="https://orcid.org/0000-0002-8401-8018">0000-0002-8401-8018</a></td></tr>
+<tr><td>Periodo</td><td>2015 - 2024</td></tr>
+<tr><td>Poblacion</td><td>Adolescentes latinoamericanos (10-19 anos)</td></tr>
+<tr><td>Licencia</td><td><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a></td></tr>
+</table>
+</section>
+<section id="indices">
+<h2 class="sec">📐 Indices Neuropsicosociales Originales</h2>
+<div class="grid">
+<div class="icard"><span class="abbr">IVD-A</span><span class="name">Indice de Vulnerabilidad Digital Adolescente</span><span class="desc">Mide la exposicion y susceptibilidad psicologica al uso problematico de plataformas digitales.</span></div>
+<div class="icard"><span class="abbr">IFP-D</span><span class="name">Indice de Fatiga Psicologica Digital</span><span class="desc">Cuantifica el agotamiento emocional y cognitivo por uso intensivo del smartphone.</span></div>
+<div class="icard"><span class="abbr">IIS-D</span><span class="name">Indice de Insomnio por Smartphone</span><span class="desc">Evalua la afectacion del sueno por el uso nocturno del smartphone.</span></div>
+<div class="icard"><span class="abbr">IRA-D</span><span class="name">Indice de Riesgo de Adiccion Digital</span><span class="desc">Predictor compuesto de probabilidad de dependencia digital cronica.</span></div>
+</div>
+</section>
+<section id="data">
+<h2 class="sec">📊 Datos y Estructura</h2>
+<div class="grid">
+<div class="card"><div class="card-icon">📁</div><h3>data/</h3><p>Datasets epidemiologicos, datos por plataforma (TikTok, Instagram, YouTube Shorts), fenotipos digitales.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/data/">Ver datos</a></div>
+<div class="card"><div class="card-icon">📄</div><h3>preprints/</h3><p>Coleccion de preprints sobre neurobiologia, psicologia digital y salud mental adolescente.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/preprints/">Ver preprints</a></div>
+<div class="card"><div class="card-icon">📋</div><h3>schemas/</h3><p>Esquemas JSON estandarizados para tests neurocognitivos y fenotipos digitales (FAIR).</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/schemas/">Ver schemas</a></div>
+<div class="card"><div class="card-icon">🗂️</div><h3>knowledge_graph/</h3><p>Grafo de conocimiento JSON-LD sobre sintomas, plataformas y biomarcadores conductuales.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/knowledge_graph/">Ver KG</a></div>
+<div class="card"><div class="card-icon">🏛️</div><h3>observatory/</h3><p>Informes trimestrales, rankings LATAM, mapas de riesgo y alertas digitales.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/observatory/">Ver observatory</a></div>
+<div class="card"><div class="card-icon">📰</div><h3>Policy Briefs</h3><p>Informes de politicas publicas sobre salud mental digital adolescente.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/results/">Ver policy briefs</a></div>
+</div>
+</section>
+<section id="tools">
+<h2 class="sec">🛠️ Herramientas Cientificas</h2>
+<div class="grid">
+<div class="card"><div class="card-icon">🤖</div><h3>Modelos Predictivos (XAI)</h3><p>SHAP e interpretabilidad para predecir ansiedad, riesgo depresivo, insomnio y deterioro ejecutivo.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/models/">Ver modelos</a></div>
+<div class="card"><div class="card-icon">🌐</div><h3>API Cientifica (OpenAPI)</h3><p>Endpoints /anxiety, /depression, /sleep, /problematic-use, /risk-profiles y /predict.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/api/openapi.yaml">Ver spec</a></div>
+<div class="card"><div class="card-icon">📊</div><h3>Simuladores</h3><p>Visualizaciones de riesgo psicologico, fragmentacion atencional y deterioro del sueno.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/simulators/">Ver simuladores</a></div>
+<div class="card"><div class="card-icon">🧩</div><h3>AI Governance</h3><p>Pasaporte de identidad IA, tarjeta de modelo y framework de gobernanza etica.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/governance/">Ver governance</a></div>
+<div class="card"><div class="card-icon">✅</div><h3>QA de Datos</h3><p>Validacion automatica con control de calidad estadistico y reproducibilidad.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/data/">Ver QA</a></div>
+<div class="card"><div class="card-icon">🐳</div><h3>Docker y CI/CD</h3><p>Entorno Docker reproducible y GitHub Actions para validacion y despliegue.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/.github/workflows/">Ver workflows</a></div>
+</div>
+</section>
+<section id="observatory">
+<h2 class="sec">🔭 Observatorio Digital Mental Health LATAM</h2>
+<div class="grid">
+<div class="card"><div class="card-icon">🗺️</div><h3>Mapa de Riesgo Regional</h3><p>Riesgo de uso problematico por pais, edad y plataforma en LATAM.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/observatory/">Ver mapa</a></div>
+<div class="card"><div class="card-icon">📅</div><h3>Informes Trimestrales</h3><p>Tendencias, alertas digitales y rankings de vulnerabilidad adolescente LATAM.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/observatory/reports/">Ver informes</a></div>
+<div class="card"><div class="card-icon">📱</div><h3>Analisis por Plataforma</h3><p>Efectos diferenciados de TikTok, Instagram Reels, YouTube Shorts y WhatsApp.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/data/platforms/">Ver analisis</a></div>
+<div class="card"><div class="card-icon">📈</div><h3>Trayectorias Longitudinales</h3><p>Seguimiento del deterioro emocional y cronificacion de ansiedad digital.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/data/">Ver datos</a></div>
+</div>
+</section>
+<section id="ethics">
+<h2 class="sec">🛡️ Etica, Privacidad y Cumplimiento</h2>
+<div class="grid">
+<div class="card"><div class="card-icon">🔒</div><h3>Proteccion de Menores</h3><p>Cumplimiento GDPR/LGPD, protocolos de anonimizacion y consentimiento informado.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/docs/">Ver protocolos</a></div>
+<div class="card"><div class="card-icon">⚖️</div><h3>Protocolo Etico</h3><p>Marco etico para investigacion con adolescentes y pre-registro de estudios.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/docs/">Ver etica</a></div>
+<div class="card"><div class="card-icon">🧬</div><h3>Fairness en IA</h3><p>Evaluacion de equidad y sesgos en modelos para poblaciones adolescentes LATAM.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/models/">Ver fairness</a></div>
+<div class="card"><div class="card-icon">🎒</div><h3>Kit Autocuidado Digital</h3><p>Recursos educativos para adolescentes, familias y docentes sobre bienestar digital.</p><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/educational/">Ver kit</a></div>
+</div>
+<div style="margin-top:20px"><strong style="color:#e6edf3;font-size:.88rem">Palabras clave:</strong><br><br>
+<span class="tag">uso problematico smartphone</span><span class="tag">salud mental adolescente</span><span class="tag">ansiedad digital</span>
+<span class="tag">depresion</span><span class="tag">insomnio</span><span class="tag">Latinoamerica</span><span class="tag">TikTok</span>
+<span class="tag">adiccion digital</span><span class="tag">SHAP</span><span class="tag">GDPR</span><span class="tag">open science</span>
+</div>
+</section>
+<section id="cite">
+<h2 class="sec">📖 Como Citar</h2>
+<div class="cite">De la Serna Tuya, J. M. (2025). <em>Uso Problematico de Smartphones y Salud Mental en Adolescentes Latinoamericanos 2015-2024</em>. Figshare. <a href="https://doi.org/10.6084/m9.figshare.31436764">https://doi.org/10.6084/m9.figshare.31436764</a></div>
+<p style="margin-top:10px;color:#8b949e;font-size:.86rem">Tambien: <a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/tree/main/CITATION.cff" style="color:#ff7b72">CFF</a></p>
+</section>
+</main>
+<footer>
+<p>Mantenido por <a href="https://orcid.org/0000-0002-8401-8018">Juan Moises de la Serna Tuya</a> — UNIR</p>
+<p style="margin-top:8px">Licencia <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a></p>
+<p style="margin-top:8px"><a href="https://github.com/juanmoisesd/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024">GitHub</a> · <a href="https://juanmoisesd.github.io/uso-problematico-smartphones-salud-mental-adolescentes-latinoamerica-2015-2024/">Sitio web</a></p>
+</footer>
+</body>
+</html>
