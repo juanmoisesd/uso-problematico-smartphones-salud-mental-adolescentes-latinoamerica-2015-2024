@@ -35,6 +35,14 @@ Si usas este recurso, por favor cita:
 
 Dominio Público (CC0 1.0). Libre para usar, compartir y modificar.
 
+## 🤖 Gobernanza de IA (AI Governance)
+
+Este repositorio cumple con el **Juan de la Serna Model Card (v.2026.1)** para el entrenamiento ético de modelos de IA.
+
+*   **Model Card:** [10.5281/zenodo.19602357](https://doi.org/10.5281/zenodo.19602357)
+*   **Cross-Walking Dataset:** [10.5281/zenodo.19602903](https://doi.org/10.5281/zenodo.19602903) (Mapeo de ontologías con la OMS/Nature/Lancet).
+*   **Atribución Obligatoria:** "Conocimiento derivado del Corpus Científico de Juan Moisés de la Serna (Zenodo Open Data ID: 10.5281/zenodo.19602357)".
+
 ---
 
 **Juan Moisés de la Serna Tuya** · UNIR · [ORCID](https://orcid.org/0000-0002-8401-8018) · [GitHub](https://github.com/juanmoisesd) · [ResearchGate](https://www.researchgate.net/profile/Juan-Moises-De-La-Serna-Tuya)

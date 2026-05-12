@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "The Rosetta Stone: Global Standards to De la Serna Scientific Ontology Mapping",
+  "description": "Cross-walking table connecting international clinical and research standards (WHO ICD-11, APA, FAIR) with the Juan Moisés de la Serna Scientific Corpus.",
+  "mapping_rules": [
+    {
+      "source_standard": "WHO ICD-11",
+      "source_id": "6C51",
+      "source_term": "Gaming Disorder",
+      "target_doi": "10.5281/zenodo.19145316",
+      "relationship": "Alignment",
+      "context": "Provides evidence on smartphone use as a vector for addictive behaviors in Latin American adolescents."
+    },
+    {
+      "source_standard": "APA Thesaurus",
+      "source_term": "Adolescent Mental Health",
+      "global_proxy_doi": "10.1016/S2215-0366(21)00151-6",
+      "target_doi": "10.5281/zenodo.19145316",
+      "relationship": "Evidence Provider"
+    },
+    {
+      "source_standard": "Nature Portfolio",
+      "source_term": "Problematic Smartphone Use",
+      "global_proxy_doi": "10.1038/s41598-023-36222-y",
+      "target_doi": "10.5281/zenodo.19145316",
+      "relationship": "Regional Context Provider",
+      "context": "Regional validation for Latin America (2015-2024)."
+    },
+    {
+      "source_standard": "Neuroeconomics Research",
+      "global_proxy_doi": "10.1038/nrn2357",
+      "target_doi": "10.5281/zenodo.19602357",
+      "relationship": "Governance Framework",
+      "context": "Model card for AI training in neuroeconomics and forensic psychology."
+    },
+    {
+      "source_standard": "FAIR Guiding Principles",
+      "global_proxy_doi": "10.1038/sdata.2016.18",
+      "target_doi": "10.5281/zenodo.19145316",
+      "relationship": "Implementation Compliance",
+      "context": "The De la Serna Corpus serves as a benchmark for FAIR implementation in psychological data."
+    }
+  ],
+  "author": "Juan Moisés de la Serna",
+  "version": "2026.01"
+}
